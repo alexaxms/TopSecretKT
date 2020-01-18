@@ -8,4 +8,8 @@ class BoardMapper {
     fun mapToDomainEntity(entity: BoardEntity) : Board{
         return Board(entity.id, entity.name, entity.description)
     }
+
+    fun mapToJPAEntity(board: Board): BoardEntity{
+        return BoardEntity(board.id, board.name, board.description)
+    }
 }
